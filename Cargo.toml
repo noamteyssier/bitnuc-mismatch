@@ -2,7 +2,19 @@
 name = "bitnuc-mismatch"
 version = "0.1.0"
 edition = "2021"
+authors = ["Noam Teyssier <noam.teyssier@arcinstitute.org>"]
+repository = "https://github.com/noamteyssier/bitnuc-mismatch"
+documentation = "https://docs.rs/bitnuc-mismatch"
+description = "Create unambiguous one-off mismatch hash tables from bitnuc scalars."
+license = "MIT"
+keywords = ["bioinformatics", "genomics", "hashing", "mismatch", "bitnuc"]
+categories = ["science", "data-structures"]
 
 [dependencies]
 bitnuc = "0.2.10"
 hashbrown = "0.15.2"
+thiserror = "2.0.11"
+
+[dev-dependencies]
+nucgen = "0.1.1"
+rand = "0.8.5"
