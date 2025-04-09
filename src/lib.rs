@@ -6,6 +6,8 @@
 //! The library is designed to be used in the context of generating mismatches for a set of parent sequences while avoiding ambiguous mismatches.
 //! Ambiguous mismatches are mismatches that are within the one-off distance of multiple parent sequences.
 //!
+//! Note that parent sequences will be members of the mismatch table.
+//!
 //! ## Example
 //! ```rust
 //!
@@ -29,6 +31,10 @@
 //! // Validate that unexpected mismatches are not present
 //! let acgg = bitnuc::as_2bit(b"ACGG").unwrap();
 //! assert!(mismatch_table.get(&acgg).is_none());
+//!
+//! // Validate that parent sequences are members of the mismatch table
+//! assert!(mismatch_table.contains_key(&parent_scalars[0]));
+//! assert!(mismatch_table.contains_key(&parent_scalars[1]));
 //! ```
 
 mod error;
