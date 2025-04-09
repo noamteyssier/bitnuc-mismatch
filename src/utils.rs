@@ -277,4 +277,23 @@ mod tests {
         assert!(generate_mismatches(0, 0, &mut buffer).is_ok());
         assert!(buffer.is_empty());
     }
+
+    #[test]
+    fn test_parents() {
+        let sequences = vec![
+            as_2bit(b"AAAA").unwrap(),
+            as_2bit(b"AAAT").unwrap(),
+            as_2bit(b"AATA").unwrap(),
+        ];
+        let table = build_mismatch_table(&sequences, 4).unwrap();
+
+        // Original sequences should map to themselves
+        assert_eq!(table.get(&sequences[0]), Some(&sequences[0]));
+        assert_eq!(table.get(&sequences[1]), Some(&sequences[1]));
+        assert_eq!(table.get(&sequences[2]), Some(&sequences[2]));
+
+        // AATT should be ambiguous (1 mutation from both seq2 and seq3)
+        let ambiguous = as_2bit(b"AATT").unwrap();
+        assert!(table.get(&ambiguous).is_none());
+    }
 }

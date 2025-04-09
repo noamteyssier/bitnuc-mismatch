@@ -2,7 +2,7 @@
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 ![actions status](https://github.com/noamteyssier/bitnuc-mismatch/workflows/CI/badge.svg)
-[![docs.rs](https://img.shields.io/docsrs/bitnuc-mismatch?color=green&label=docs.rs)](https://docs.rs/bitnuc-mismatch/latest/bitnuc-mismatch/)
+[![docs.rs](https://img.shields.io/docsrs/bitnuc-mismatch?color=green&label=docs.rs)](https://docs.rs/bitnuc_mismatch/latest/bitnuc_mismatch/)
 
 Create unambiguous one-off mismatch hash tables from bitnuc scalars.
 
