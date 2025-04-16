@@ -41,10 +41,13 @@ mod error;
 mod utils;
 
 pub use error::MismatchError;
-pub use utils::{build_mismatch_table, generate_mismatches};
+pub use utils::{build_mismatch_table, build_mismatch_table_with_ambiguous, generate_mismatches};
 
 /// Type alias for a mismatch table mapping mismatches to their parent sequences
 pub type MismatchTable = hashbrown::HashMap<BitSeqMut, BitSeq>;
+
+/// Type alias for a mismatch table mapping ambiguous mismatches to their parent sequences
+pub type AmbiguousMismatchTable = hashbrown::HashMap<BitSeqMut, Vec<BitSeq>>;
 
 /// Type alias for a bitnuc scalar sequence (child or parent sequence)
 pub type BitSeqMut = u64;
