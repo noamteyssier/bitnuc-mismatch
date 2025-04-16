@@ -1,6 +1,6 @@
 [package]
 name = "bitnuc-mismatch"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Noam Teyssier <noam.teyssier@arcinstitute.org>"]
 repository = "https://github.com/noamteyssier/bitnuc-mismatch"
